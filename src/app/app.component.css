@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+  }
+  
+  mat-card {
+    max-width: 80%;
+    margin: 2em auto;
+    text-align: center;
+  }
+  
+  mat-toolbar-row {
+    justify-content: space-between;
+   
+  }
+  
+  .done {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+  }
+
+  .mat-toolbar.mat-primary {
+    background:#0092c9;/* #2d4492;  #00a0dd ; #0991c7*/ 
+    color: #fff;
+    z-index: 10000;
+}
+
+.mat-drawer.mat-drawer-push {
+  background-color: #fff;
+  width: 15%;
+}
+
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: 2.5em;
+}
+
+.menu-button {
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 150px;
+    line-height: 18px;
+    /* padding: 0 16px; */
+    /* border-radius: 2px; */
+    overflow: visible;
+    background-color: #00a0dd; /*  #3c57b1; */;
+    height: 100%;
+    padding: 7px;
+    border-radius: 0px;
+    font-size: 1em !important;
+    color: #fff;
+    font-weight: bold;
+}
+  
+
+::ng-deep .mat-menu-panel {
+  min-width: 150px !important;
+  max-width: 280px;
+  /* overflow: auto; */
+  -webkit-overflow-scrolling: touch;
+  max-height: calc(100vh - 48px);
+  border-radius: 2px;
+  outline: 0;
+  /* margin-top: 50px !important; */
+}
+
+::ng-deep.mat-menu-content:not(:empty) {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+::ng-deep .mat-menu-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    line-height: 34px !important;
+    height: 34px !important;
+    padding: 0px !important;
+    text-align: center !important;
+    text-decoration: none;
+    max-width: 100%;
+    position: relative;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+::ng-deep .mat-menu-item:focus {
+  outline: none;
+}
+
+.content {
+  max-width: 120%;
+  margin: auto;
+  margin-top: 3%;
+}
+.flex-fill {
+  flex: 1 1 auto;
+}
+
+
+
+.bg-blue {
+  background: #0092c9;
+  color: #fff;
+  z-index: 10000;
+}
+
+
+
+
+::ng-deep .dx-datagrid .dx-header-row > td {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-size: 12px  !important; 
+  line-height: 12px   !important; 
+  background-color: #E9E9E9 !important;
+  color: black
+}
+
+::ng-deep .dx-datagrid .dx-datagrid-table .dx-datagrid-filter-row > td {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  font-size: 12px  !important; 
+  line-height: 0px   !important; 
+}
+
+::ng-deep .dx-datagrid .dx-row-lines > td {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-size: 12px  !important; 
+  line-height: 15px   !important; 
+ }
+
+ ::ng-deep .dx-datagrid-header-panel {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+  background-color: #fff;
+}
+
+::ng-deep .dx-datagrid.dx-datagrid-borders > .dx-datagrid-pager {
+  margin-top: 0px;
+}
+
+::ng-deep .dx-datagrid-group-panel .dx-group-panel-item {
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  background: #e0e0e0;
+  border-radius: 0px;
+  padding: 8px 10px;
+}
+
+/* ::ng-deep .dx-datagrid .dx-editor-with-menu, .dx-datagrid-container .dx-editor-with-menu {
+  height: 32px;
+}
+
+::ng-deep .dx-editor-cell .dx-texteditor .dx-texteditor-input 
+{
+    height: 30px;
+    line-height: 30px;
+}
+::ng-deep .dx-menu-base .dx-menu-item .dx-menu-item-content {
+    line-height: 8px;
+} */
+
+
+::ng-deep .dx-datagrid-filter-row .dx-menu .dx-menu-horizontal .dx-menu-items-container {
+  height: 100%  !important;
+  top: 0px !important;
+  position: absolute  !important;
+  padding-left: 4px !important;
+} 
+
+.container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+

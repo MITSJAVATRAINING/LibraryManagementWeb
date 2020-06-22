@@ -1,6 +1,106 @@
-Header
-<br>
-<router-outlet></router-outlet>
+<section id="header" class="header">
+    <mat-sidenav-container fullscreen>
 
-<br>
-Footer
+        <mat-toolbar color="primary" style="width:100%;position: fixed;padding-left: 30px;padding-right: 50px;">
+            <button mat-icon-button  class="mat-icon-button sidenav-toggle-button"
+                style="margin-left:-10px;display: none">
+                <mat-icon aria-label="Menu" class="material-icons">menu</mat-icon>
+            </button>
+            <span class="component-title">
+                <span style="font-size: 1.3em;font-weight:bold;margin-left: -15px;margin-right:25px;">
+                    Library Management
+                    <sub>&reg;</sub>
+                </span>
+            </span>
+            <!-- Home -->
+            <button mat-button class="menu-button" [routerLink]="['/home']">
+                <mat-icon aria-hidden="false" aria-label="Home">home</mat-icon>
+                &nbsp;Home
+            </button>
+            <button mat-button class="menu-button" [routerLink]="['/user']" style="margin-left: 2px">
+                User 
+            </button>
+            <button mat-button class="menu-button" [routerLink]="['/book']" style="margin-left: 2px">
+                Book
+            </button>
+            <button mat-button class="menu-button" style="margin-left: 2px; padding-left: 2px; min-width: 149px;">
+                Issue Book
+            </button>
+
+        </mat-toolbar>
+        <section id="main-content" class="container-fluid">
+            <router-outlet></router-outlet>
+        </section>
+        <section id="footer" class="footer text-center">
+            <span style="line-height: 3">© 2020 - Library Management<sub>&reg;</sub> Version : <strong>1.0.0</strong>
+            </span>
+        </section>
+
+    </mat-sidenav-container>
+
+</section>
+
+
+<style>
+    ::ng-deep .mat-tooltip {
+        white-space: pre-line !important;
+    }
+
+    .btn-circle {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 15px;
+        background: #337ab7;
+    }
+
+    .title-right {
+        flex: 1 1 auto;
+        text-align: right;
+    }
+
+    #main-content {
+        padding-top: 50px;
+        min-height: 92vh;
+        background-color: #f6f8f9;
+    }
+
+    mat-toolbar.mat-bread-crumb.mat-toolbar.mat-toolbar-single-row {
+        background-color: #e8f8ff !important;
+    }
+
+    ::ng-deep app-ng7-mat-breadcrumb>.mat-bread-crumb:before {
+        content: "\f1ea" !important;
+        font-family: FontAwesome;
+        padding-right: 0.5em;
+        color: #e68e0b;
+        font-size: 1em;
+    }
+
+    ::ng-deep app-ng7-mat-breadcrumb>.mat-bread-crumb {
+        height: 1.25em !important;
+        font-size: 1.25em !important;
+    }
+
+    ::ng-deep app-ng7-mat-breadcrumb>.mat-bread-crumb .mat-bread-crumb-list .mat-list-item .mat-bread-crumb-list-item {
+        font-size: 0.7em !important;
+    }
+
+    mat-card {
+        margin: 0em !important;
+        text-align: left !important;
+        max-width: 100%;
+    }
+
+    ::ng-deep app-ng7-mat-breadcrumb>.mat-bread-crumb {
+        background-color: #e2e2e2 !important;
+        padding: 15px;
+    }
+
+    .navg-mat-menu:hover {
+        text-decoration: none !important;
+    }
+</style>

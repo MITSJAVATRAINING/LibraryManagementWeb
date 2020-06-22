@@ -1,1 +1,334 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+body {
+  color: black;
+  font-size: 0.75rem !important;
+}
+
+.toast-container .toast {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 6px;
+  padding: 15px 15px 15px 50px;
+  width: 550px !important;
+  border-radius: 3px 3px 3px 3px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  box-shadow: 0 0 12px #999999;
+  color: #FFFFFF;
+}
+
+.mat-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.content {
+  max-width: 100%;
+  margin: auto;
+  flex: 1 1 auto;
+}
+
+.mat-form-field {
+  font-size: 12px;
+  width: 100%;
+}
+
+/* .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  } */
+
+.mat-header-row {
+  background-color: #cce5ff;
+  min-height: 40px;
+  border-width: 1px;
+}
+
+.star-header-button {
+	box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 180px;
+    line-height: 40px;
+    padding: 0 16px;
+    border-radius: 0;
+    overflow: visible;
+    transform: translate3d(0,0,0);
+    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
+	  font-family: Roboto,"Helvetica Neue",sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #cfcfcf !important;
+    pointer-events: none !important;
+    color: #000 !important;
+    border: 0;
+}
+
+
+.card-header-text {
+    background-color: #e9e9e9;
+    color: black;
+    font-weight: bold;
+  }
+
+  .btn-header {
+    background-color:#cfcfcf!important;
+    pointer-events: none !important;
+    color: black !important;
+  }
+
+.mat-row,
+.mat-footer-row {
+  min-height: 30px;
+}
+.mat-row:hover {
+  background-color: #FFFACD;
+} 
+
+.mat-header-cell {
+  font-weight: bold;
+  color: black;
+  padding: 0 10px 0 0;
+}
+.th {
+ 
+    font-weight: bold;
+    color: black;
+    padding: 0 10px 0 0;
+  
+}
+.mat-cell {
+  padding: 0 10px 0 0;
+  word-break: break-word;
+ }
+
+ .tr {
+ 
+    padding: 0 10px 0 0;
+    word-break: break-word;
+   
+ }
+
+.page-header-icon {
+  font-size: 15px;
+  padding-right: 4px;
+  line-height: 0;
+}
+
+
+#mainDiv>.row {
+  min-height: 95vh;
+  background-color: smoke;
+  margin-top: 3%
+}
+
+.flex-fill {
+  flex: 1 1 auto;
+}
+
+.card-header {
+  padding: 5px !important;
+}
+
+
+.mat-select-panel {
+  min-width: 112px;
+  max-width: 280px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 0;
+  padding-bottom: 0;
+  max-height: 256px;
+  min-width: 100%;
+  margin-left: 7% !important;
+}
+
+.mat-chip {
+  padding: 4px;
+  font-size: 17px;
+  line-height: 20px;
+  border-radius: 1px;
+}
+
+.mat-checkbox {
+  margin-bottom: -8px !important;
+}
+
+
+
+
+
+.mat-dialog-container {
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, .2), 0 24px 38px 3px rgba(0, 0, 0, .14), 0 9px 46px 8px rgba(0, 0, 0, .12);
+  display: block;
+  padding: 0px 0px 10px 0px !important;
+  border-radius: 2px;
+  box-sizing: border-box;
+  overflow: auto;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  max-height: inherit;
+}
+
+.advance-label {
+  align-items: center;
+  display: flex;
+}
+
+.advance-filter-block>.modal-footer .advance-search-button {
+  background:  #0991c7;
+  border-radius: 6px;
+  padding: 0 15px 0 15px;
+  line-height: 30px;
+  color: #fff;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.advance-filter-block>.modal-footer .advance-reset-button {
+  background:  #ffc107;
+  border-radius: 6px;
+  padding: 0 15px 0 15px;
+  line-height: 30px;
+  color: #fff;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.advance-filter-block>.modal-footer .advance-close-button {
+  background:#EF5350;
+  border-radius: 6px;
+  padding: 0 15px 0 15px;
+  line-height: 30px;
+  color: #fff;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+::ng-deep .ngb-tp-input-container>.btn-link {
+  color: #000 !important;
+}
+
+
+
+
+.advance-search-filter {
+  position: relative;
+}
+
+.filter-input {
+  background: #fff;
+  height: 40px;
+  width: 350px;
+  color: #000000;
+  border: 1px solid #cccccc;
+  margin-bottom: 0px;
+  -webkit-appearance: none;
+  border-radius: 4px 0px 0px 4px;
+  -moz-border-radius: 4px 0px 0px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  text-align: left;
+  font-size: 12px !important;
+  font-weight: 500;
+  padding: 0px 0px 0px 10px;
+  font-size: 16px;
+  float: left;
+}
+
+#advance-filter-action {
+  background: #eeeeee;
+  color: #fff;
+  font-size: inherit;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 0px;
+  -webkit-appearance: none;
+  border-radius: 0px 4px 4px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  -webkit-border-radius: 0px 4px 4px 0px;
+  width: 52px;
+  height: 28px;
+  border: 1px solid #cccccc;
+  padding-top: 0px;
+  float: left;
+}
+
+#advance-filter-action:hover {
+  background: #9a9d9a;
+  color: #fff !important;
+  -webkit-appearance: none;
+}
+
+.advance-filter-arrow {
+  margin-left: 17px;
+}
+
+.advance-filter-arrow:before {
+  content: "\f0b0";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #0092c9;
+  position: relative;
+  font-size: 20px;
+  left: -8px;
+  top: -1px;
+}
+
+
+.close {
+  color: #fff;
+}
+
+.card-body {
+  padding: 0.5rem !important;
+}
+
+.mat-cell, .mat-footer-cell {
+   font-size: 12px !important; 
+}
+.mat-expansion-panel-content {
+ font: 400 12px/20px Roboto,"Helvetica Neue",sans-serif !important; 
+}
+
+.mat-expansion-panel-body {
+  padding: 0 0.5rem 16px !important;
+}
+
+
+.test-suite-config-modal {
+  width: 90%;
+  max-width: 100%;
+  height: 90vh;
+  max-height: 100%;
+}
+
+.test-suite-config-modal > .modal-content {
+  height: 600px !important;
+} 
+
+.button-radius {
+  border-radius: 6px !important;
+}
+
+

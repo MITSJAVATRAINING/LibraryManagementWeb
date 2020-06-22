@@ -1,0 +1,82 @@
+<div class="content">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-12">
+        <div class="card" id="cdUser" style="border-radius: 0px;color: black">
+          <span class="card-header" style="color: #28a745;font-weight: bold">
+            <div class="row">
+              <div class="col-6">
+                <button color="primary" class="card-header-text btn-header star-header-button" style="color:black">
+                  Add User</button>
+              </div>
+              <div class="col-4"></div>
+              <div class="col-2">
+                <span style="padding-left: 2px;margin-right:5px;float: right;">
+                  <button type="button" [disabled]="!_userFormGroup.valid" class="btn btn-success header-action-button" style="width: 100px;"
+                    (click)="onSave()" matTooltip="Save">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                    Save</button>
+                </span>
+              </div>
+            </div>
+          </span>
+          <div class="card-body"  style="margin-top:20px;background: radial-gradient(#b9c8d1, transparent);">
+            <div class="content">
+              
+            <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-6" style="background-color: #f7fcfb;">
+                <form [formGroup]="_heroFormGroup">
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <label for="firstName">First Name:</label>
+                      <input text class="form-control" formControlName="firstName" required>
+                      <span class="text-danger" *ngIf="_userFormGroup.get('firstName').hasError('required')">First name is
+                        required</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <label for="lastName">Last Name:</label>
+                      <input text class="form-control" formControlName="lastName" required>
+                      <span class="text-danger" *ngIf="_userFormGroup.get('lastName').hasError('required')">Last name is
+                        required</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <label for="phone">Phone Number:</label>
+                      <input text class="form-control" formControlName="phone" required>
+                      <span class="text-danger" *ngIf="_userFormGroup.get('email').hasError('phone')">Phone Number is
+                        required</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <label for="firstName">Email:</label>
+                      <input text class="form-control" formControlName="email" required>
+                      <span class="text-danger" *ngIf="_userFormGroup.get('email').hasError('required')">Email is
+                        required</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <label for="address">Address:</label>
+                      <textarea class="form-control" rows="4" id="error" formControlName="address"></textarea>
+                      <span class="text-danger" *ngIf="_userFormGroup.get('address').hasError('required')">User Address is
+                        required</span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
