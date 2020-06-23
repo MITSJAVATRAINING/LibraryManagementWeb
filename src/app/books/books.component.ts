@@ -16,7 +16,8 @@ export class BooksComponent implements OnInit {
   @ViewChild(MatSort) sortBook: MatSort;
   public dataSourceBook: MatTableDataSource<any>;
   public dataBook: any[];
-  public displayedColumnsBook = ['bookName', 'categoryName', 'authorName'];
+  
+  public displayedColumnsBook = ['bookName', 'categoryName', 'authorName', 'availableBook'];
 
   ngOnInit() {
     this._service.getBooks().subscribe(response => {

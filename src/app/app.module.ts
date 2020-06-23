@@ -14,6 +14,8 @@ import { AddBookComponent } from './add-book/add-book.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LibraryService } from './library.service';
 import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
+import { IssueBookComponent } from './issue-book/issue-book.component';
+import { ReturnBookComponent } from './return-book/return-book.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
     UserComponent,
     BooksComponent,
     AddUserComponent,
-    AddBookComponent
+    AddBookComponent,
+    IssueBookComponent,
+    ReturnBookComponent
   ],
   imports: [
     BrowserModule,

@@ -27,7 +27,8 @@ export class AddBookComponent implements OnInit {
     this._bookFormGroup = this._fb.group({
       bookName: ['', Validators.required],
       categoryId: ['', Validators.required],
-      authorId: ['', Validators.required]
+      authorId: ['', Validators.required],
+      totalBooks: ['', Validators.required]
     });
 
     this._service.getAuthors().subscribe(response => {

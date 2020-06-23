@@ -53,6 +53,14 @@
                       </mat-cell>
                     </ng-container>
 
+                    <ng-container matColumnDef="availableBook">
+                      <mat-header-cell *matHeaderCellDef mat-sort-header> Available/Total
+                      </mat-header-cell>
+                      <mat-cell *matCellDef="let row">
+                        {{row.availableBooks}}/{{row.totalBooks}}
+                      </mat-cell>
+                    </ng-container>
+
 
 
                     <mat-header-row *matHeaderRowDef="displayedColumnsBook; sticky: true">

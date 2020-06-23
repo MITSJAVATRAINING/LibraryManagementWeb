@@ -61,6 +61,18 @@
                       </mat-cell>
                     </ng-container>
 
+                    <ng-container matColumnDef="issuedBook">
+                      <mat-header-cell *matHeaderCellDef mat-sort-header> Issued Books
+                      </mat-header-cell>
+                      <mat-cell *matCellDef="let row">
+                        <ul>
+                          <li *ngFor="let book of row.issuedBook;">
+                            {{ book.bookName }} 
+                          </li>
+                        </ul>
+                      </mat-cell>
+                    </ng-container>
+
 
                     <mat-header-row *matHeaderRowDef="displayedColumnsUser; sticky: true">
                     </mat-header-row>

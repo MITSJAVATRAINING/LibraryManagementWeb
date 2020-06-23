@@ -6,6 +6,8 @@ import { UserComponent } from './user/user.component';
 import { BooksComponent } from './books/books.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { AddBookComponent } from './add-book/add-book.component';
+import { IssueBookComponent } from './issue-book/issue-book.component';
+import { ReturnBookComponent } from './return-book/return-book.component';
 
 const ROUTES: Routes = [
   {
@@ -25,6 +27,12 @@ const ROUTES: Routes = [
   },
   {
     path: 'addBook', component: AddBookComponent
+  },
+  {
+    path: 'issueBook', component: IssueBookComponent
+  },
+  {
+    path: 'returnBook', component: ReturnBookComponent
   }
 ];
 

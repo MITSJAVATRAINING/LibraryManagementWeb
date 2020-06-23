@@ -21,10 +21,22 @@ export class LibraryService {
 
   addBook(input): Observable<any> {
     return this._httpClient.post<any>(this._apiEndpoint + 'book/addbook', input);
-}
+  }
+
+  issueBook(input): Observable<any> {
+    return this._httpClient.post<any>(this._apiEndpoint + 'book/issuebook', input);
+  }
+
+  returnBook(input): Observable<any> {
+    return this._httpClient.post<any>(this._apiEndpoint + 'book/returnbook', input);
+  }
 
   getBooks(): Observable<any> {
     return this._httpClient.get(this._apiEndpoint + 'book/books');
+  }
+
+  getIssuedBooks(): Observable<any> {
+    return this._httpClient.get(this._apiEndpoint + 'book/issuedbooks');
   }
 
   getCategories(): Observable<any> {

@@ -16,7 +16,8 @@ export class UserComponent implements OnInit {
   @ViewChild(MatSort) sortUser: MatSort;
   public dataSourceUser: MatTableDataSource<any>;
   public dataUser: any[];
-  public displayedColumnsUser = ['name', 'phone', 'address', 'email'];
+  public issuedBook: any[];
+  public displayedColumnsUser = ['name', 'phone', 'address', 'email', 'issuedBook'];
 
   ngOnInit() {
     this._service.getUsers().subscribe(response => {
@@ -26,6 +27,20 @@ export class UserComponent implements OnInit {
         this.dataSourceUser.paginator = this.paginatorUser;
         this.dataSourceUser.sort = this.sortUser;
       }
+
+      this._service.getIssuedBooks().subscribe(res => {
+        if (res.statusCode === 200) {
+          this.issuedBook = res.list;
+        }
+
+        this.dataUser.forEach(user => {
+          let issuedBooks = [] ;
+          user.issuedBook = [];
+          issuedBooks =  this.issuedBook.filter(b => b.userId === user.userId);
+          user.issuedBook = issuedBooks;
+        });
+
+      });
     });
   }
 
