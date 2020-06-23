@@ -20,13 +20,13 @@
               </div>
             </div>
           </span>
-          <div class="card-body"  style="margin-top:20px;background: radial-gradient(#b9c8d1, transparent);">
+          <div class="card-body"  style="background: radial-gradient(#b9c8d1, transparent);">
             <div class="content">
               
-            <div class="row">
+            <div class="row" style="margin-top: 3px;margin-bottom: 3px;">
               <div class="col-md-3"></div>
               <div class="col-md-6" style="background-color: #f7fcfb;">
-                <form [formGroup]="_heroFormGroup">
+                <form [formGroup]="_userFormGroup">
                   <div class="row">
                     <div class="form-group col-md-12">
                       <label for="firstName">First Name:</label>
@@ -47,7 +47,7 @@
                     <div class="form-group col-md-12">
                       <label for="phone">Phone Number:</label>
                       <input text class="form-control" formControlName="phone" required>
-                      <span class="text-danger" *ngIf="_userFormGroup.get('email').hasError('phone')">Phone Number is
+                      <span class="text-danger" *ngIf="_userFormGroup.get('phone').hasError('required')">Phone Number is
                         required</span>
                     </div>
                   </div>

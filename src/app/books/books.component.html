@@ -1,3 +1,168 @@
-<p>
-  books works!
-</p>
+<div class="content">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-12">
+        <div id="cdSoftwareProvisionSummary">
+          <div>
+            <div class="row flex-fill">
+              <div class="col-2">
+                <span>
+                  <button  [routerLink]="['/addBook']" type="button" class="btn btn-success  header-action-button"
+                    matTooltip="Add a new Book">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    Add Book</button>
+                </span>
+
+              </div>
+              <div class="col-10"
+                style="text-align: right;display: flex;justify-content: flex-end;padding-bottom: 0.8em;">
+                <div class="advance-search-filter">
+                  <form name="advanceFilter" method="post">
+                    <mat-icon style="margin-left: -40px; margin-top: 7px;padding-right: 40px; "aria-hidden="false" aria-label="Filter">filter_list</mat-icon>
+                    <input (keyup)="applyFilter($event.target.value)" [(ngModel)]="filter" placeholder="Filter"
+                      class="filter-input" name="filterinput" />
+                  </form>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mat-container mat-elevation-z8">
+                  <mat-table [dataSource]="dataSourceBook" matSort #sortBook>
+
+
+                    <ng-container matColumnDef="bookName">
+                      <mat-header-cell *matHeaderCellDef mat-sort-header> Book Name
+                      </mat-header-cell>
+                      <mat-cell *matCellDef="let row">
+                        {{row.bookName}}
+                      </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="categoryName">
+                      <mat-header-cell *matHeaderCellDef mat-sort-header> Category
+                      </mat-header-cell>
+                      <mat-cell *matCellDef="let row">
+                        {{row.categoryName}}
+                      </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="authorName">
+                      <mat-header-cell *matHeaderCellDef mat-sort-header> Author
+                      </mat-header-cell>
+                      <mat-cell *matCellDef="let row">
+                        {{row.authorName}}
+                      </mat-cell>
+                    </ng-container>
+
+
+
+                    <mat-header-row *matHeaderRowDef="displayedColumnsBook; sticky: true">
+                    </mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumnsBook;">
+                    </mat-row>
+                  </mat-table>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <div class="col-12" style="float: right;">
+    <mat-paginator #paginatorBook [pageSize]="100" [pageSizeOptions]="[10,20,50,100]" showFirstLastButtons>
+    </mat-paginator>
+  </div>
+</div>
+
+
+<style>
+
+
+
+  .div-border {
+    border-style: solid;
+    border-width: thin;
+    border-color: rgba(0, 0, 0, 0.125);
+    background-color: rgba(0, 0, 0, .03);
+  }
+
+  .filter-form {
+    width: 80%;
+  }
+
+
+  .mat-form-field-label-wrapper {
+    margin-left: 20px;
+  }
+
+  .placeholder {
+    margin-left: 20px;
+  }
+
+  .advance-filter-fields {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Pull in your reset css and fonts http://seodesigns.com/projects/TD/css/reset.css */
+
+  .main-location {
+    display: none;
+  }
+
+  #main-submit {
+    background: #eeeeee;
+    color: #fff;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 0px;
+    -webkit-appearance: none;
+    border-radius: 0px 4px 4px 0px;
+    -moz-border-radius: 0px 4px 4px 0px;
+    -webkit-border-radius: 0px 4px 4px 0px;
+    width: 52px;
+    height: 35px;
+    border: 1px solid #cccccc;
+    padding-top: 0px;
+    float: left;
+  }
+
+  #main-submit:hover {
+    background: #9a9d9a;
+    color: #fff !important;
+    -webkit-appearance: none;
+  }
+
+  .search-large {
+    font-size: 16px;
+    margin: 0px;
+    color: #4A4A4A;
+    position: absolute;
+    top: 19px;
+    left: 16px;
+    display: inline-block;
+    width: 105px;
+    height: 20px;
+    font-weight: 900;
+    text-align: left;
+  }
+
+  .devprep-header-block {
+    justify-content: center;
+    align-items: center;
+    margin: 7px;
+  }
+
+  ::ng-deep .mat-select-panel {
+    max-width: 30px !important;
+  }
+</style>

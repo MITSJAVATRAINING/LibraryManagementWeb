@@ -1,3 +1,70 @@
-<p>
-  add-book works!
-</p>
+<div class="content">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-12">
+        <div class="card" id="cdUser" style="border-radius: 0px;color: black">
+          <span class="card-header" style="color: #28a745;font-weight: bold">
+            <div class="row">
+              <div class="col-6">
+                <button color="primary" class="card-header-text btn-header star-header-button" style="color:black">
+                  Add Book</button>
+              </div>
+              <div class="col-4"></div>
+              <div class="col-2">
+                <span style="padding-left: 2px;margin-right:5px;float: right;">
+                  <button type="button" [disabled]="!_bookFormGroup.valid" class="btn btn-success header-action-button" style="width: 100px;"
+                    (click)="onSave()" matTooltip="Save">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                    Save</button>
+                </span>
+              </div>
+            </div>
+          </span>
+          <div class="card-body"  style="margin-top:50px;background: radial-gradient(#b9c8d1, transparent);">
+            <div class="content">
+              
+            <div class="row" style="margin-top:100px;margin-bottom:100px">
+              <div class="col-md-3"></div>
+              <div class="col-md-6" style="background-color: #f7fcfb;">
+                <form [formGroup]="_bookFormGroup">
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <label for="firstName">Book Name:</label>
+                      <input text class="form-control" formControlName="bookName" required>
+                      <span class="text-danger" *ngIf="_bookFormGroup.get('bookName').hasError('required')">Book name is
+                        required</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <label for="category">Category:</label>
+                      <select class="form-control" formControlName="categoryId">
+                        <option *ngFor="let category of categoryList" [value]="category.id">{{category.value}}</option>
+                      </select>
+                      <span class="text-danger" *ngIf="_bookFormGroup.get('categoryId').hasError('required')">Category is
+                        required</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <label for="author">Author:</label>
+                      <select class="form-control" formControlName="authorId">
+                        <option *ngFor="let author of authorList" [value]="author.id">{{author.value}}</option>
+                      </select>
+                      <span class="text-danger" *ngIf="_bookFormGroup.get('authorId').hasError('required')">Category is
+                        required</span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
